@@ -4,8 +4,10 @@
 int main()
 {
     // String para armazenar os dígitos ISBN
-    char isbn[13] = "0-13-162959-X";
-
+    char isbn[13];
+    
+    scanf("%s", &isbn);
+    
     // Acumuladores
     int s1[10] = {0}, s2 = 0;
     int k = 0, j = 0, resto;
