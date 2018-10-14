@@ -9,7 +9,6 @@ int main()
     
     while (strcmp(isbn, "FIM") != 0) {
 
-        /* code */
         scanf("%s", &isbn);
         if(strcmp(isbn, "FIM") == 0) {
             return 0;
