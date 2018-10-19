@@ -57,6 +57,12 @@ int main() {
 
                             // Multiplica para liberar uma casa decimal
                             // soma o número e divide por 10 para andar a virgula
+                            
+                            // Fatoração da expressão
+                            // 10a + b / 10 =>
+                            // (10a + b) * 10^-1 => 
+                            // a + b * 10^-1 => 
+                            // a + 0.1 * b
                             valor = ((valor * 10) + (*(p + j) - '0')) / 10.0;
                             pontoValor++;
                         } else {
