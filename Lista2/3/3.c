@@ -2,24 +2,24 @@
 #include <string.h>
 
 int main() {
-    int posicao, controle = 0;
+    int posicao = 0;
     char str1[20];
     char str2[20];
 
-    printf("Indique a primeira string(ate 10 caracteres):\n");
-    scanf("%s", str1);
+    do {
+        printf("Indique a primeira string(ate 20 caracteres):\n");
+        scanf("%s", str1);
 
-    while(controle == 0) {
-        printf("Indique a segunda string(ate 10 caracteres):\n");
+        printf("Indique a segunda string(ate 20 caracteres):\n");
         scanf("%s", str2);
 
         printf("Indique a posicao para trocar:\n");
         scanf("%i", &posicao);
-    }
 
-    str_replace(str1, str2, posicao);
+        str_replace(str1, str2, posicao);
 
-    printf("A nova string: \"%s\"", str1);
+        printf("A nova string: \"%s\"\n", str1);
+    } while(posicao > 0);
 
     return 0;
 }
