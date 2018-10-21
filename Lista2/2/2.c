@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 
+int Cripto(char * str1, char * str2);
+
 int main()
 {
     char texto1[9], texto2[9], texto3[9];
@@ -14,8 +16,8 @@ int main()
 }
 
 int Cripto(char * str1, char * str2) {
-    char controle1[15] = "Afhs2]s@lD5,23&";
-    char controle2[15] = "gFp04#:w^ld9!/*";
+    char controle1[19] = "afhsu]i@lD5,23&eyPc";
+    char controle2[19] = "gFp04#:w^ld9!/*?.;z";
     int i, j;
 
     for(i = 0; i < 9; i++) {
