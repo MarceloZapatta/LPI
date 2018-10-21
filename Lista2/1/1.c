@@ -5,11 +5,14 @@
 int main()
 {
     // String para armazenar os dígitos ISBN
+    // 11 caracteres por que conta o '-'
     char isbn[11];
     
     while (strcmp(isbn, "FIM") != 0) {
 
         scanf("%s", &isbn);
+        
+        // Verifica se o usuário digitou FIM
         if(strcmp(isbn, "FIM") == 0) {
             return 0;
         }
@@ -22,7 +25,7 @@ int main()
             if(i == 0) {
                 *s1 = *(isbn + i) - '0';
                 k++;
-            } else if(i != 9) {
+            } else if(i != 9 && i != 10) {
                 *(s1 + k) += *(s1 + (k - 1)) + (*(isbn + i) - '0');
                 k++;
             } else if(i == 10) {
