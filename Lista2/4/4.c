@@ -32,6 +32,9 @@ int main() {
                     // Insere o proximo digito do cpf na string
                     *(cpf + qtdCpf) = *(string + j);
                     qtdCpf++;
+                    if(qtdCpf == 11) {
+                        *(cpf + qtdCpf) = '\0';
+                    }
                 } else {
                     
                     // Caso ainda não tenha aparecido 
