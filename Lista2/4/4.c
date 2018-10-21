@@ -79,6 +79,7 @@ int main() {
                             qtdCpf = 0;
                             pot = 0;
                             pontoValor = 0;
+                            valor = 0;
                         }
                     }
                 }
