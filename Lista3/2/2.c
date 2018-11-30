@@ -1,12 +1,18 @@
 #include <stdio.h>
 #include <string.h>
+#include <math.h>
 
 int ConverterParaInteiro(char * stringNumero, int stringLength);
 
 int main()
 {
     // String para armazenar os números
-    char stringNumero[5] = "1234";
+    char stringNumero[5];
+
+    // Recebo o número a ser convertido
+
+    printf("Digite o a string númerica a ser convertida: \n(Até 5 caracteres)\n");
+    scanf("%s", &stringNumero);
 
     // Inteiro para armazenar a 
     // string transformada em número
@@ -21,23 +27,17 @@ int main()
 }
 
 int ConverterParaInteiro(char * stringNumero, int stringLength) {
+
 	// Multiplicador das casas decimais
-	int multiplicador = 10;
+	int multiplicador = pow(10, stringLength - 1);
 
 	int tmpNumero = 0;
 
 	for (int i = 0; i < stringLength; ++i)
 	{
-        printf("numero: %d \n", (*(stringNumero + i) - '0'));
 
-        if(i != 0) {
-		    tmpNumero += (*(stringNumero + i) - '0');
-        } else {
-            tmpNumero += (*(stringNumero + i) - '0') * multiplicador;
-            multiplicador *= 10;
-        }
-
-        printf("tmpnumero: %d \n", tmpNumero);
+        tmpNumero += (*(stringNumero + i) - '0') * multiplicador;
+        multiplicador = multiplicador / 10;
 	}
 
 	return tmpNumero;
